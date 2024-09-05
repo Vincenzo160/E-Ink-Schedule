@@ -21,21 +21,21 @@ For a more simple guide follow the one on [gorzog.com/e-ink-schedule](https://go
 5. If you don't see the filesystem of your Rasberry Pi Pico on the explorer tab use the "Toggle Pico-W-FS" button on the VSC bottom status bar
 6. Transfer [main.py](https://github.com/Vincenzo160/E-Ink-Schedule/blob/main/src/main.py) to the Rasberry Pi Pico
 7. Install needed dependecies (datetime) using the MicroPico Tab (You may need to connect to a Wi-Fi Network)
-8. Open main.py on the filesystem of the Rasberry Pi Pico and modify the config on the top of the file
-   **System config:**
-   `scdate`: Time after which to show the schedule for the next day 
-   `fastBoot`: Use a less verbose init process (Faster)
-   `utcOffset`: UTC offset in hours (ex. 2 = UTC+2)
-   `refreshTime`: How many seconds to wait before updating information
-   **Network config:**
-   `ssid`: The SSID of your Wi-Fi network [REQUIRED]
-   `password`: The password of your Wi-Fi network [REQUIRED]
-   `ntptime.host`: NTP Server to use for time retrieval
-   `scheduleServer`: URL for the schedule.json hosted on a web server, you can find an example for formatting [here](https://github.com/Vincenzo160/E-Ink-Schedule/blob/main/example/schedule.json), for more info see [schedule format](https://github.com/Vincenzo160/E-Ink-Schedule/blob/main/README.md#Schedule+Format)
-   **Strings:**
-   These can be used for localization, try to use the same character count otherwise change manualy the offsets
-   **Display driver config:**
-   Display pins mapping, don't change if using socket
+8. Open main.py on the filesystem of the Rasberry Pi Pico and modify the config on the top of the file<br>
+   **System config:**<br>
+   `scdate`: Time after which to show the schedule for the next day<br>
+   `fastBoot`: Use a less verbose init process (Faster)<br>
+   `utcOffset`: UTC offset in hours (ex. 2 = UTC+2)<br>
+   `refreshTime`: How many seconds to wait before updating information<br>
+   **Network config:**<br>
+   `ssid`: The SSID of your Wi-Fi network [REQUIRED]<br>
+   `password`: The password of your Wi-Fi network [REQUIRED]<br>
+   `ntptime.host`: NTP Server to use for time retrieval<br>
+   `scheduleServer`: URL for the schedule.json hosted on a web server, you can find an example for formatting [here](https://github.com/Vincenzo160/E-Ink-Schedule/blob/main/example/schedule.json), for more info see [schedule format](https://github.com/Vincenzo160/E-Ink-Schedule/blob/main/README.md#Schedule+Format) [REQUIRED]<br>
+   **Strings:**<br>
+   These can be used for localization, try to use the same character count otherwise change manualy the offsets<br>
+   **Display driver config:**<br>
+   Display pins mapping, don't change if using socket<br>
 
 ## Schedule Format
 The Rasberry Pi Pico will retrieve your schedule from a web server, the screen can display up to 7 subjects if more are defined "..." will be displayed instead, if the day dosen't contain any subject a "free" screen will be displayed.
