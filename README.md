@@ -38,7 +38,7 @@ For a more simple guide follow the one on [gorzog.com/e-ink-schedule](https://go
    Display pins mapping, don't change if using socket<br>
 
 ## Schedule Format
-The Rasberry Pi Pico will retrieve your schedule from a web server, the screen can display up to 7 subjects if more are defined "..." will be displayed instead, if the day dosen't contain any subject a "free" screen will be displayed.
+The Rasberry Pi Pico will retrieve your schedule from a web server, the screen can display up to 7 subjects, if more are defined "..." will be displayed instead, if the day dosen't contain any subject a "free" screen will be displayed.
 Example Schedule:
 ```
 {
