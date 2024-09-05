@@ -1,0 +1,124 @@
+{
+  "weekly_schedule": {
+    "0": [
+      {
+        "time": "08",
+        "subject": "Math"
+      },
+      {
+        "time": "09",
+        "subject": "English"
+      },
+      {
+        "time": "10",
+        "subject": "History"
+      }
+    ],
+    "1": [
+      {
+        "time": "08",
+        "subject": "Science"
+      },
+      {
+        "time": "09",
+        "subject": "Physical Education"
+      },
+      {
+        "time": "10",
+        "subject": "Art"
+      },
+      {
+        "time": "11",
+        "subject": "Music"
+      }
+    ],
+    "2": [
+      {
+        "time": "08",
+        "subject": "Geography"
+      },
+      {
+        "time": "09",
+        "subject": "Math"
+      },
+      {
+        "time": "10",
+        "subject": "English"
+      },
+      {
+        "time": "11",
+        "subject": "Computer Science"
+      },
+      {
+        "time": "12",
+        "subject": "Biology"
+      }
+    ],
+    "3": [
+      {
+        "time": "08",
+        "subject": "Chemistry"
+      },
+      {
+        "time": "09",
+        "subject": "Physics"
+      },
+      {
+        "time": "10",
+        "subject": "Math"
+      },
+      {
+        "time": "11",
+        "subject": "History"
+      },
+      {
+        "time": "12",
+        "subject": "English"
+      },
+      {
+        "time": "13",
+        "subject": "Art"
+      }
+    ],
+    "4": [
+      {
+        "time": "08",
+        "subject": "Physical Education"
+      },
+      {
+        "time": "09",
+        "subject": "Science"
+      },
+      {
+        "time": "10",
+        "subject": "Geography"
+      },
+      {
+        "time": "11",
+        "subject": "Math"
+      },
+      {
+        "time": "12",
+        "subject": "English"
+      },
+      {
+        "time": "13",
+        "subject": "Music"
+      },
+      {
+        "time": "14",
+        "subject": "Computer Science"
+      }
+    ],
+    "5": [
+      {
+        "displayMode": "free"
+      }
+    ],
+    "6": [
+      {
+        "displayMode": "free"
+      }
+    ]
+  }
+}
