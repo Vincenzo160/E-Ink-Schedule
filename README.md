@@ -2,7 +2,7 @@
 Display your schedule on a e-ink display using a Raspberry Pi Pico WH with Micropython
 Note: This project includes the display driver for the Waveshare Pico e-Paper 2.9 (B) display provided by Waveshare
 
-## Hardware used
+## Hardware used
 - Rasberry Pi Pico WH
 - [Waveshare Pico e-Paper 2.9 (B)](https://www.waveshare.com/wiki/Pico-ePaper-2.9-B)
 
