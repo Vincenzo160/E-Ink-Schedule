@@ -31,7 +31,7 @@ For a more simple guide follow the one on [gorzog.com/e-ink-schedule](https://go
    `ssid`: The SSID of your Wi-Fi network [REQUIRED]<br>
    `password`: The password of your Wi-Fi network [REQUIRED]<br>
    `ntptime.host`: NTP Server to use for time retrieval<br>
-   `scheduleServer`: URL for the schedule.json hosted on a web server, you can find an example for formatting [here](https://github.com/Vincenzo160/E-Ink-Schedule/blob/main/example/schedule.json), for more info see [schedule format](https://github.com/Vincenzo160/E-Ink-Schedule/blob/main/README.md#Schedule+Format) [REQUIRED]<br>
+   `scheduleServer`: URL for the schedule.json hosted on a web server, you can find an example for formatting [here](https://github.com/Vincenzo160/E-Ink-Schedule/blob/main/example/schedule.json), for more info see [schedule format](https://github.com/Vincenzo160/E-Ink-Schedule/blob/main/README.md#schedule-format) [REQUIRED]<br>
    **Strings:**<br>
    These can be used for localization, try to use the same character count otherwise change manualy the offsets<br>
    **Display driver config:**<br>
