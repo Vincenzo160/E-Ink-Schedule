@@ -12,7 +12,7 @@ Note: This project includes the display driver for the Waveshare Pico e-Paper 2.
 - Display the schedule for tomorrow or today depending on the time of day
 
 ## How to install
-For a more simple guide follow the one on [gorzog.com/e-ink-schedule](https://gorzog.com/e-ink-schedule) [TBD]
+For a more simple guide follow the one on [gorzog.com/e-ink-schedule](https://gorzog.com/projects/E-Ink-Schedule/)
 ### Using MicroPico VS Code extension
 1. Install the [MicroPico extension](https://marketplace.visualstudio.com/items?itemName=paulober.pico-w-go) on VS Code
 2. Flash Micropython on the Rasberry Pi Pico [(Official guide)](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html)
