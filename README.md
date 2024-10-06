@@ -27,6 +27,9 @@ For a more simple guide follow the one on [gorzog.com/e-ink-schedule](https://go
    `fastBoot`: Use a less verbose init process (Faster)<br>
    `utcOffset`: UTC offset in hours (ex. 2 = UTC+2)<br>
    `refreshTime`: How many seconds to wait before updating information<br>
+   `ledOffEnable`: Enable LED schedule<br>
+   `ledOffStart`: Time after which to turn off the onboard LED (Requires `ledOffEnable` to be True)<br>
+   `ledOffEnd`: Time after which to turn on the onboard LED (Requires `ledOffEnable` to be True)<br>
    **Network config:**<br>
    `ssid`: The SSID of your Wi-Fi network [REQUIRED]<br>
    `password`: The password of your Wi-Fi network [REQUIRED]<br>

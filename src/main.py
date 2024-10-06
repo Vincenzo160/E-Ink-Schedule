@@ -9,13 +9,16 @@ import time
 import framebuf
 import utime
 
-ver = "1.8"
+ver = "1.9"
 
 # System config
 scdate = 09 # When to show the schedule for the next day
 fastBoot = True # Skip verbose boot
 utcOffset = 2 # UTC + offset in hours (ex. 2 = UTC+2)
 refreshTime = 3600 # Refresh time in seconds
+ledOffEnable = False # Enable onboard led schedule
+ledOffStart = 21 # Turn off the onboard led at this hour
+ledOffEnd = 7 # Turn on the onboard led at this hour
 
 # Network config
 ssid = 'YOUR_SSID'
@@ -549,12 +552,17 @@ if __name__ == '__main__':
         formatted_today = get_formatted_date(today)
         print(today)
         current_hour = today[3]
+        if ledOffStart <= current_hour or current_hour < ledOffEnd and ledOffEnable:
+            led.value(0)
+        else:
+            led.value(1)
+
         if 0 <= current_hour < scdate:
             print("Print schedule for today")
-            drawSchedule(subjects_today, True, formatted_today, today[3])
+            drawSchedule(subjects_today, True, formatted_today, current_hour)
         else:
             print("Print schedule for tomorrow")
-            drawSchedule(subjects_tomorrow, False, formatted_today, today[3])
+            drawSchedule(subjects_tomorrow, False, formatted_today, current_hour)
 
         time.sleep(refreshTime)
     
