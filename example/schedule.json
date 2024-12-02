@@ -3,7 +3,7 @@
       "scdate": "09",
       "utcOffset": "1",
       "refreshTime": "3600",
-      "ledOffEnable": "true",
+      "ledOffEnable": "false",
       "ledOffStart": "21",
       "ledOffEnd": "7"
     },
