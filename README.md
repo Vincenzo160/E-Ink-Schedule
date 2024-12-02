@@ -23,6 +23,7 @@ For a more simple guide follow the one on [gorzog.com/e-ink-schedule](https://go
 7. Install needed dependecies (datetime) using the MicroPico Tab (You may need to connect to a Wi-Fi Network)
 8. Open main.py on the filesystem of the Rasberry Pi Pico and modify the config on the top of the file<br>
    **System config:**<br>
+   `fetchConfigFromRemote`: Fetch config from remote server, see [example json](https://github.com/Vincenzo160/E-Ink-Schedule/blob/main/example/schedule.json)<br>
    `scdate`: Time after which to show the schedule for the next day<br>
    `fastBoot`: Use a less verbose init process (Faster)<br>
    `utcOffset`: UTC offset in hours (ex. 2 = UTC+2)<br>
@@ -45,6 +46,7 @@ The Rasberry Pi Pico will retrieve your schedule from a web server, the screen c
 Example Schedule:
 ```
 {
+  ...
   "weekly_schedule": {
     "0": [
       {

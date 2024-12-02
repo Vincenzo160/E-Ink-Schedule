@@ -9,9 +9,11 @@ import time
 import framebuf
 import utime
 
-ver = "1.9"
+ver = "1.10"
 
 # System config
+fetchConfigFromRemote = False # Fetch config from remote server (if fetching fails the following values will be used)
+
 scdate = 09 # When to show the schedule for the next day
 fastBoot = True # Skip verbose boot
 utcOffset = 2 # UTC + offset in hours (ex. 2 = UTC+2)
@@ -486,6 +488,8 @@ if __name__ == '__main__':
         epd.imageblack.text("retriving, SSID:", 0, 133, 0x00)
         epd.imagered.text("Fastboot", 30, 50, 0xff)
         epd.imageblack.text("Please wait..", 0, 163, 0x00)
+    if fetchConfigFromRemote:
+        epd.imagered.text("Remote Config", 10, 65, 0xff)
     epd.display()
     led.value(0)
     ip = None
@@ -510,6 +514,43 @@ if __name__ == '__main__':
             print("Failed to connect, retrying...")
             sleep(5)
         
+    if fetchConfigFromRemote:
+        print("Fetching config from remote server")
+        try:
+            headers = {
+                'User-Agent': 'Pico-cosimello/' + ver,
+            }
+
+            response = requests.get(scheduleServer, headers=headers)
+            try:
+                config = json.loads(response.text)
+                print("Config fetched")
+                # parsing config
+                print(config)
+                # Fetch the remote configuration
+                remote_config = config.get('remoteConfig', {})
+
+                # Store the values in variables
+                scdate = int(remote_config.get('scdate'))
+                utcOffset = int(remote_config.get('utcOffset'))
+                refreshTime = int(remote_config.get('refreshTime'))
+                ledOffEnable = bool(remote_config.get('ledOffEnable'))
+                ledOffStart = int(remote_config.get('ledOffStart'))
+                ledOffEnd = int(remote_config.get('ledOffEnd'))
+
+                # Print the variables to verify
+                print(f"scdate: {scdate}")
+                print(f"utcOffset: {utcOffset}")
+                print(f"refreshTime: {refreshTime}")
+                print(f"ledOffEnable: {ledOffEnable}")
+                print(f"ledOffStart: {ledOffStart}")
+                print(f"ledOffEnd: {ledOffEnd}")
+            except ValueError as e:
+                print("JSON decoding failed:", e)
+                throwError("CFG ERR", "Malformed config, reverting")
+        except OSError as e:
+            print("Request failed:", e)
+            throwError("HTTP ERR", "HTTP request failed (RemoteCfg)")
 
     print("Waiting for schedule")
     print("")

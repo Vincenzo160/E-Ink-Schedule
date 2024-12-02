@@ -1,4 +1,12 @@
 {
+    "remoteConfig": {
+      "scdate": "09",
+      "utcOffset": "1",
+      "refreshTime": "3600",
+      "ledOffEnable": "true",
+      "ledOffStart": "21",
+      "ledOffEnd": "7"
+    },
   "weekly_schedule": {
     "0": [
       {
